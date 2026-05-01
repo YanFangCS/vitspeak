@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Let ViT Speak: GenLIP</title>
+  <desc id="desc">Social preview for GenLIP, showing visual tokens and text tokens flowing into a vision encoder for MLLMs.</desc>
+  <rect width="1200" height="630" fill="#f6fafb"/>
+  <rect x="58" y="58" width="1084" height="514" rx="36" fill="#ffffff" stroke="#d7e5e8" stroke-width="3"/>
+  <text x="600" y="150" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="76" font-weight="800" fill="#071b22">Let ViT Speak</text>
+  <text x="600" y="208" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="600" fill="#375867">Generative Language-Image Pre-training</text>
+  <text x="600" y="258" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="25" fill="#58707a">Pretrain by speaking. Deploy as a vision encoder for MLLMs.</text>
+  <g transform="translate(214 330)">
+    <rect x="0" y="0" width="62" height="62" rx="12" fill="#b9e3e5" stroke="#07303a" stroke-width="5"/>
+    <rect x="78" y="0" width="62" height="62" rx="12" fill="#b9e3e5" stroke="#07303a" stroke-width="5"/>
+    <rect x="156" y="0" width="62" height="62" rx="12" fill="#b9e3e5" stroke="#07303a" stroke-width="5"/>
+    <text x="260" y="43" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="800" fill="#07303a">+</text>
+    <rect x="310" y="0" width="62" height="62" rx="12" fill="#f6eddb" stroke="#07303a" stroke-width="5"/>
+    <rect x="388" y="0" width="62" height="62" rx="12" fill="#f6eddb" stroke="#07303a" stroke-width="5"/>
+    <path d="M482 31 H572" stroke="#07303a" stroke-width="8" stroke-linecap="round"/>
+    <path d="M572 31 l-22 -18 M572 31 l-22 18" stroke="#07303a" stroke-width="8" stroke-linecap="round"/>
+    <rect x="604" y="-16" width="230" height="94" rx="22" fill="#eaf3f4" stroke="#07303a" stroke-width="5"/>
+    <text x="719" y="40" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="800" fill="#071b22">GenLIP ViT</text>
+  </g>
+  <text x="600" y="506" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#375867">Single Transformer - No contrastive batches - No extra text decoder</text>
+</svg>
