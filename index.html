@@ -84,16 +84,16 @@
           <p class="publication-subtitle">A minimalist generative pretraining framework for scalable vision encoders in multimodal large language models.</p>
 
           <div class="publication-authors" aria-label="Authors">
-            <span class="author-block">Yan Fang<sup>*</sup></span>
-            <span class="author-block">Mengcheng Lan<sup>*</sup></span>
-            <span class="author-block">Zilong Huang<sup>&dagger;</sup></span>
-            <span class="author-block">Weixian Lei</span>
-            <span class="author-block">Yunqing Zhao</span>
-            <span class="author-block">Yujie Zhong</span>
-            <span class="author-block">Yingchen Yu</span>
-            <span class="author-block">Qi She</span>
-            <span class="author-block">Yao Zhao</span>
-            <span class="author-block">Yunchao Wei<sup>&dagger;</sup></span>
+            <span class="author-block">Yan Fang<sup>1,2,*</sup></span>
+            <span class="author-block">Mengcheng Lan<sup>2,3,*</sup></span>
+            <span class="author-block">Zilong Huang<sup>2,&dagger;</sup></span>
+            <span class="author-block">Weixian Lei<sup>2</sup></span>
+            <span class="author-block">Yunqing Zhao<sup>2</sup></span>
+            <span class="author-block">Yujie Zhong<sup>2</sup></span>
+            <span class="author-block">Yingchen Yu<sup>2</sup></span>
+            <span class="author-block">Qi She<sup>2</sup></span>
+            <span class="author-block">Yao Zhao<sup>1</sup></span>
+            <span class="author-block">Yunchao Wei<sup>1,&dagger;</sup></span>
           </div>
 
           <div class="publication-affiliations">
@@ -151,6 +151,8 @@
               <p>Tokenizer and LM head are discarded at deployment.</p>
             </div>
           </div>
+
+          <p class="pipeline-takeaway">Released as an MLLM vision encoder: the language head teaches visual alignment during pretraining, then gets discarded at deployment.</p>
 
           <div class="evidence-chips" aria-label="Key GenLIP facts">
             <span>Single Transformer</span>
@@ -246,15 +248,25 @@
           </div>
         </div>
 
-        <div class="result-figure-grid">
-          <figure class="figure-panel">
-            <img src="static/images/genlip-data-scale.png" alt="Data scaling curves for OCR, VQA, and Caption tasks from 1B to 8B pretraining samples.">
-            <figcaption>Data scaling shows sustained gains, with gated attention improving stability across scales.</figcaption>
-          </figure>
-          <figure class="figure-panel">
-            <img src="static/images/genlip-stage2-validation.png" alt="Stage 1 versus Stage 2 validation curves across evaluation resolutions.">
-            <figcaption>Native-aspect adaptation improves OCR, VQA, and caption performance at higher evaluation resolutions.</figcaption>
-          </figure>
+        <div class="result-figure-grid figure-story-grid">
+          <article class="figure-story">
+            <figure class="figure-panel story-figure">
+              <img src="static/images/genlip-data-scale.png" alt="Data scaling curves for OCR, VQA, and Caption tasks from 1B to 8B pretraining samples.">
+              <figcaption>Data scaling shows sustained gains, with gated attention improving stability across scales.</figcaption>
+            </figure>
+            <div class="research-takeaway">
+              <p><strong>Scaling signal.</strong> As pretraining grows from 1B to 8B samples, GenLIP keeps improving OCR, VQA, and caption probes, supporting the vision encoder scaling story rather than a one-off benchmark gain.</p>
+            </div>
+          </article>
+          <article class="figure-story reverse-story">
+            <figure class="figure-panel story-figure">
+              <img src="static/images/genlip-stage2-validation.png" alt="Stage 1 versus Stage 2 validation curves across evaluation resolutions.">
+              <figcaption>Native-aspect adaptation improves OCR, VQA, and caption performance at higher evaluation resolutions.</figcaption>
+            </figure>
+            <div class="research-takeaway">
+              <p><strong>Resolution signal.</strong> Continued pretraining with native aspect ratios strengthens detail-sensitive recognition, which is where an MLLM vision encoder most needs reliable spatial evidence.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -266,20 +278,35 @@
           <h2 class="section-title" id="probes-title">What does &quot;speak&quot; reveal?</h2>
           <p>Generation and patch readout are used here to inspect the learned visual-language representation, not to redefine GenLIP as a captioning model.</p>
         </div>
-        <div class="probe-grid">
-          <figure class="figure-panel">
-            <img src="static/images/genlip-caption-examples.png" alt="GenLIP caption generation examples comparing model scales and pretraining stages.">
-            <figcaption>Direct caption generation shows that the pretrained ViT can produce grounded descriptions from visual tokens.</figcaption>
-          </figure>
-          <figure class="figure-panel">
-            <img src="static/images/genlip-patch-semantics.png" alt="Patch semantic readout showing local visual regions mapped to language tokens.">
-            <figcaption>Patch semantics reveal local visual embeddings aligned with language concepts.</figcaption>
-          </figure>
+        <div class="probe-grid figure-story-grid probe-story-grid">
+          <article class="figure-story">
+            <figure class="figure-panel story-figure">
+              <img src="static/images/genlip-caption-examples.png" alt="GenLIP caption generation examples comparing model scales and pretraining stages.">
+              <figcaption>Direct caption generation shows that the pretrained ViT can produce grounded descriptions from visual tokens.</figcaption>
+            </figure>
+            <div class="research-takeaway">
+              <p><strong>Generation probe.</strong> Captioning is used here as an inspection tool for visual-language alignment, while deployment still uses GenLIP as the MLLM vision encoder.</p>
+            </div>
+          </article>
+          <article class="figure-story reverse-story">
+            <figure class="figure-panel story-figure">
+              <img src="static/images/genlip-patch-semantics.png" alt="Patch semantic readout showing local visual regions mapped to language tokens.">
+              <figcaption>Patch semantics reveal local visual embeddings aligned with language concepts.</figcaption>
+            </figure>
+            <div class="research-takeaway">
+              <p><strong>Patch semantics.</strong> Local readouts make the learned representation more legible by showing which visual regions align with recognizable language concepts.</p>
+            </div>
+          </article>
         </div>
-        <figure class="figure-panel wide-figure">
-          <img src="static/images/genlip-ocr-examples.png" alt="OCR-heavy GenLIP generation probes on receipt, geometry, and tiny text examples.">
-          <figcaption>OCR-heavy probes explain the strong Doc/OCR benchmark behavior and expose remaining failure modes.</figcaption>
-        </figure>
+        <article class="figure-story wide-story">
+          <figure class="figure-panel wide-figure story-figure">
+            <img src="static/images/genlip-ocr-examples.png" alt="OCR-heavy GenLIP generation probes on receipt, geometry, and tiny text examples.">
+            <figcaption>OCR-heavy probes explain the strong Doc/OCR benchmark behavior and expose remaining failure modes.</figcaption>
+          </figure>
+          <div class="research-takeaway">
+            <p><strong>Doc/OCR behavior.</strong> The qualitative probes connect the benchmark gains to visible text-centric evidence, while keeping failure modes inspectable instead of hiding them behind aggregate scores.</p>
+          </div>
+        </article>
       </div>
     </section>
 
