@@ -225,22 +225,23 @@
           </div>
           <div class="responsive-table">
             <table>
+              <caption class="is-sr-only">Qwen2.5-7B frozen visual representation results across Doc/OCR, VQA, caption, and overall averages.</caption>
               <thead>
                 <tr>
-                  <th>Model</th>
-                  <th>Arch</th>
-                  <th>Data</th>
-                  <th>Doc/OCR Avg</th>
-                  <th>General VQA Highlights</th>
-                  <th>Caption Highlights</th>
-                  <th>ALL AVG</th>
+                  <th scope="col">Model</th>
+                  <th scope="col">Arch</th>
+                  <th scope="col">Data</th>
+                  <th scope="col">Doc/OCR Avg</th>
+                  <th scope="col">General VQA Highlights</th>
+                  <th scope="col">Caption Highlights</th>
+                  <th scope="col">ALL AVG</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td>OpenVision2</td><td>L/16</td><td>12.8B</td><td>49.5</td><td>VQAv2 60.0, MME-P 1325</td><td>TextCaps 133.8</td><td>64.9</td></tr>
-                <tr><td>SigLIP</td><td>L/16</td><td>40.0B</td><td>52.0</td><td>ScienceQA 86.7</td><td>NoCaps 81.5, COCO 72.0</td><td>64.5</td></tr>
-                <tr><td>SigLIP2</td><td>g/16</td><td>40.0B</td><td>53.2</td><td>ScienceQA 87.7, MME-P 1422</td><td>TextCaps 142.7</td><td>68.9</td></tr>
-                <tr class="highlight-row"><td>GenLIP</td><td>g/16</td><td>8.0B</td><td>62.1</td><td>GQA 54.5, MME-P 1483</td><td>NoCaps 85.0, TextCaps 144.8</td><td>73.6</td></tr>
+                <tr><th scope="row">OpenVision2</th><td>L/16</td><td>12.8B</td><td>52.4</td><td>VQAv2 60.0, MME-P 1325</td><td>TextCaps 133.8</td><td>64.9</td></tr>
+                <tr><th scope="row">SigLIP</th><td>L/16</td><td>40.0B</td><td>52.0</td><td>ScienceQA 86.7</td><td>NoCaps 81.5, COCO 72.0</td><td>64.5</td></tr>
+                <tr><th scope="row">SigLIP2</th><td>g/16</td><td>40.0B</td><td>56.6</td><td>ScienceQA 87.7, MME-P 1422</td><td>TextCaps 142.7</td><td>68.9</td></tr>
+                <tr class="highlight-row"><th scope="row">GenLIP</th><td>g/16</td><td>8.0B</td><td>63.5</td><td>GQA 54.5, MME-P 1483</td><td>NoCaps 85.0, TextCaps 144.8</td><td>73.6</td></tr>
               </tbody>
             </table>
           </div>
