@@ -324,6 +324,7 @@ button:focus-visible,
 }
 
 .transformer-stage strong {
+  color: #ffffff;
   font-size: 1.05rem;
 }
 
