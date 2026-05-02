@@ -259,6 +259,95 @@
         </div>
       </div>
     </section>
+
+    <section class="section probes-section" aria-labelledby="probes-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Representation Probes</p>
+          <h2 class="section-title" id="probes-title">What does &quot;speak&quot; reveal?</h2>
+          <p>Generation and patch readout are used here to inspect the learned visual-language representation, not to redefine GenLIP as a captioning model.</p>
+        </div>
+        <div class="probe-grid">
+          <figure class="figure-panel">
+            <img src="static/images/genlip-caption-examples.png" alt="GenLIP caption generation examples comparing model scales and pretraining stages.">
+            <figcaption>Direct caption generation shows that the pretrained ViT can produce grounded descriptions from visual tokens.</figcaption>
+          </figure>
+          <figure class="figure-panel">
+            <img src="static/images/genlip-patch-semantics.png" alt="Patch semantic readout showing local visual regions mapped to language tokens.">
+            <figcaption>Patch semantics reveal local visual embeddings aligned with language concepts.</figcaption>
+          </figure>
+        </div>
+        <figure class="figure-panel wide-figure">
+          <img src="static/images/genlip-ocr-examples.png" alt="OCR-heavy GenLIP generation probes on receipt, geometry, and tiny text examples.">
+          <figcaption>OCR-heavy probes explain the strong Doc/OCR benchmark behavior and expose remaining failure modes.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section demo-section" id="demo" aria-labelledby="demo-title">
+      <div class="container">
+        <div class="demo-panel">
+          <div>
+            <p class="section-kicker">Demo</p>
+            <h2 class="section-title" id="demo-title">Explore GenLIP Through Generation Probes</h2>
+            <p>Explore the pretrained encoder's visual-language alignment through generation probes. The deployed model is intended as an MLLM vision encoder.</p>
+          </div>
+          <div class="demo-samples" aria-label="Demo sample categories">
+            <span>Natural image</span>
+            <span>Document/OCR</span>
+            <span>Chart or diagram</span>
+            <span>Tiny text</span>
+          </div>
+          <a class="project-button light-button" href="#release-code">Demo entry</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section release-section" id="release" aria-labelledby="release-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Release</p>
+          <h2 class="section-title" id="release-title">Paper, Code, Models, And Citation</h2>
+          <p>The first release path keeps all resources visible from the first viewport and collected here for repeated access.</p>
+        </div>
+        <div class="release-grid" id="release-models">
+          <article class="release-card"><h3>GenLIP-L/16</h3><p>0.3B parameters - 24 layers - recommended for efficient evaluation.</p><a href="static/pdfs/paper.pdf">Model details</a></article>
+          <article class="release-card"><h3>GenLIP-So/16</h3><p>0.4B parameters - 27 layers - balanced scale for MLLM experiments.</p><a href="static/pdfs/paper.pdf">Model details</a></article>
+          <article class="release-card"><h3>GenLIP-g/16</h3><p>1.1B parameters - 40 layers - strongest benchmark and Doc/OCR performance.</p><a href="static/pdfs/paper.pdf">Model details</a></article>
+        </div>
+        <div class="quick-links">
+          <a id="release-code" href="https://github.com/yanfangcs/vitspeak" target="_blank" rel="noopener">GitHub repository</a>
+          <a href="static/pdfs/paper.pdf" target="_blank" rel="noopener">Paper PDF</a>
+          <a href="#demo">Demo section</a>
+          <a href="GenLIP_Tech/paper.pdf" target="_blank" rel="noopener">Technical source PDF</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section citation-section" id="citation" aria-labelledby="citation-title">
+      <div class="container is-max-desktop">
+        <div class="bibtex-header">
+          <h2 class="section-title" id="citation-title">BibTeX</h2>
+          <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard" type="button">
+            <i class="fas fa-copy" aria-hidden="true"></i>
+            <span class="copy-text">Copy</span>
+          </button>
+        </div>
+        <pre id="bibtex-code"><code>@article{fang2026letvitspeak,
+  title={Let ViT Speak: Generative Language-Image Pre-training},
+  author={Fang, Yan and Lan, Mengcheng and Huang, Zilong and Lei, Weixian and Zhao, Yunqing and Zhong, Yujie and Yu, Yingchen and She, Qi and Zhao, Yao and Wei, Yunchao},
+  year={2026},
+  url={https://yanfangcs.github.io/vitspeak}
+}</code></pre>
+      </div>
+    </section>
   </main>
+
+  <footer class="footer">
+    <div class="container is-max-desktop">
+      <p>This work was mainly sponsored by the National Natural Science Foundation of China (No. 92470203). This work was conducted during Yan Fang and Mengcheng Lan's internships at ByteDance.</p>
+      <p>Website template adapted from the academic project page template and Nerfies project page.</p>
+    </div>
+  </footer>
 </body>
 </html>
