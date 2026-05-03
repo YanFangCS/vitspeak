@@ -32,10 +32,10 @@
   <meta name="citation_author" content="Zhao, Yao">
   <meta name="citation_author" content="Wei, Yunchao">
   <meta name="citation_publication_date" content="2026">
-  <meta name="citation_pdf_url" content="https://yanfangcs.github.io/vitspeak/static/pdfs/paper.pdf">
+  <meta name="citation_pdf_url" content="https://yanfangcs.github.io/vitspeak/static/pdfs/GenLIP_tech.pdf">
   <meta name="theme-color" content="#0b3038">
   <title>Let ViT Speak: Generative Language-Image Pre-training</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="static/images/pixel.png">
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
   <script defer src="static/js/fontawesome.all.min.js"></script>
@@ -104,19 +104,19 @@
           <p class="publication-notes"><sup>*</sup>Equal contribution &nbsp; <sup>&dagger;</sup>Corresponding authors</p>
 
           <nav class="publication-links" aria-label="Project links">
-            <a class="project-button" href="static/pdfs/paper.pdf" target="_blank" rel="noopener">
+            <a class="project-button" href="static/pdfs/GenLIP_tech.pdf" target="_blank" rel="noopener">
               <i class="fas fa-file-pdf" aria-hidden="true"></i><span>Paper</span>
             </a>
-            <a class="project-button" href="static/pdfs/paper.pdf" target="_blank" rel="noopener">
+            <a class="project-button" href="static/pdfs/GenLIP_tech.pdf" target="_blank" rel="noopener">
               <i class="fas fa-book-open" aria-hidden="true"></i><span>arXiv</span>
             </a>
-            <a class="project-button" href="#release-code">
+            <a class="project-button" href="https://github.com/YanFangCS/GenLIP">
               <i class="fab fa-github" aria-hidden="true"></i><span>Code</span>
             </a>
-            <a class="project-button" href="#release-models">
+            <a class="project-button" href="https://huggingface.co/collections/YanFang/genlip">
               <i class="fas fa-cube" aria-hidden="true"></i><span>Model</span>
             </a>
-            <a class="project-button" href="#demo">
+            <a class="project-button" href="coming soon">
               <i class="fas fa-play" aria-hidden="true"></i><span>Demo</span>
             </a>
           </nav>
@@ -134,32 +134,32 @@
                 <span class="token text-token"></span>
                 <span class="token text-token"></span>
               </div>
-              <p>Image patches and text tokens share one sequence.</p>
+              <p>Pretraining on image caption data.</p>
             </div>
             <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
             <div class="pipeline-stage transformer-stage">
-              <strong>Single GenLIP Transformer</strong>
-              <span>Prefix-LM objective - MRoPE - gated attention</span>
+              <strong>GenLIP Model</strong>
+              <span>single transformer + single autoregressive object</span>
             </div>
             <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
             <div class="pipeline-stage deploy-stage">
               <div class="deploy-flow">
-                <span>Visual embeddings</span>
+                <span>GenLIP as ViT</span>
                 <span>Projector</span>
                 <span>MLLM</span>
               </div>
-              <p>Tokenizer and LM head are discarded at deployment.</p>
+              <p>Serve as competitive vision encoder in MLLMs</p>
             </div>
           </div>
 
-          <p class="pipeline-takeaway">Released as an MLLM vision encoder: the language head teaches visual alignment during pretraining, then gets discarded at deployment.</p>
+          <p class="pipeline-takeaway">GenLIP: builds efficient vision encoder with vision-language alignment by a single transformer and a single autoregressive object.</p>
 
           <div class="evidence-chips" aria-label="Key GenLIP facts">
             <span>Single Transformer</span>
-            <span>No contrastive batches</span>
-            <span>No extra text decoder</span>
+            <span>Single NTP Loss</span>
+            <span>No text transformer</span>
             <span>8B pretraining samples</span>
-            <span>MLLM vision encoder</span>
+            <span>Excellent Scalability</span>
           </div>
         </div>
       </div>
@@ -182,7 +182,7 @@
         <h2 class="section-title" id="abstract-title">Abstract</h2>
         <div class="content lead-copy">
           <p>In this paper, we present <strong>Generative Language-Image Pre-training (GenLIP)</strong>, a simplified generative pretraining approach for Vision Transformers tailored to multimodal large language models. To better align ViTs with the autoregressive nature of LLMs, GenLIP trains a ViT to predict language tokens directly from visual tokens using a standard language modeling objective, without contrastive batch construction or an additional text decoder.</p>
-          <p>GenLIP offers three key advantages: simplicity, scalability, and performance. With training totaling 8B samples on Recap-DataComp-1B, GenLIP matches or surpasses strong baselines such as SigLIP2. With continued pretraining on multi-resolution images at native aspect ratios, GenLIP further excels at detail-sensitive tasks such as OCR, chart understanding, and visual question answering.</p>
+          <p>GenLIP offers three key advantages: <strong>simplicity, scalability, and performance</strong>. With training totaling 8B samples on Recap-DataComp-1B, GenLIP matches or surpasses strong baselines such as SigLIP2. With continued pretraining on multi-resolution images at native aspect ratios, GenLIP further excels at detail-sensitive tasks such as OCR, chart understanding, and visual question answering.</p>
         </div>
         <div class="tldr-grid">
           <article><h3>Simplicity</h3><p>A single Transformer jointly models visual and linguistic tokens with one language modeling objective.</p></article>
@@ -221,8 +221,41 @@
 
         <div class="table-panel">
           <div class="table-header">
+            <h3>Qwen2.5-1.5B Frozen Visual Representation</h3>
+            <a href="static/pdfs/GenLIP_tech.pdf" target="_blank" rel="noopener">Full table in paper</a>
+          </div>
+          <div class="responsive-table">
+            <table>
+              <caption class="is-sr-only">Qwen2.5-1.5B frozen visual representation results across Doc/OCR, VQA, caption, and overall averages.</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Model</th>
+                  <th scope="col">Arch</th>
+                  <th scope="col">Data</th>
+                  <th scope="col">Doc/OCR Avg (of 7)</th>
+                  <th scope="col">MME-P</th>
+                  <th scope="col">Nocaps</th>
+                  <th scope="col">ALL AVG</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">OpenVision2</th><td>L/16</td><td>12.8B</td><td>44.3</td><td>1230</td><td>84.3</td><td>58.7</td></tr>
+                <tr><th scope="row">SigLIP</th><td>L/16</td><td>40.0B</td><td>42.4</td><td>1203</td><td>84.0</td><td>56.9</td></tr>
+                <tr><th scope="row">SigLIP2</th><td>L/16</td><td>40.0B</td><td>45.0</td><td>1165</td><td>82.9</td><td>58.7</td></tr>
+                <tr class="highlight-row"><th scope="row">GenLIP</th><td>L/16</td><td>8.0B</td><td>49.3</td><td>1258</td><td>82.6</td><td>61.5</td></tr>
+                <tr><th scope="row">SigLIP2</th><td>So/16</td><td>40.0B</td><td>46.8</td><td>1220</td><td>84.3</td><td>60.6</td></tr>
+                <tr class="highlight-row"><th scope="row">GenLIP</th><td>So/16</td><td>8.0B</td><td>50.1</td><td>1215</td><td>87.5</td><td>62.6</td></tr>
+                <tr><th scope="row">SigLIP2</th><td>g/16</td><td>40.0B</td><td>47.3</td><td>1284</td><td>84.4</td><td>61.5</td></tr>
+                <tr class="highlight-row"><th scope="row">GenLIP</th><td>g/16</td><td>8.0B</td><td>53.2</td><td>1256</td><td>88.3</td><td>65.2</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="table-panel">
+          <div class="table-header">
             <h3>Qwen2.5-7B Frozen Visual Representation</h3>
-            <a href="static/pdfs/paper.pdf" target="_blank" rel="noopener">Full table in paper</a>
+            <a href="static/pdfs/GenLIP_tech.pdf" target="_blank" rel="noopener">Full table in paper</a>
           </div>
           <div class="responsive-table">
             <table>
@@ -232,17 +265,17 @@
                   <th scope="col">Model</th>
                   <th scope="col">Arch</th>
                   <th scope="col">Data</th>
-                  <th scope="col">Doc/OCR Avg</th>
-                  <th scope="col">General VQA Highlights</th>
-                  <th scope="col">Caption Highlights</th>
+                  <th scope="col">Doc/OCR Avg (of 7)</th>
+                  <th scope="col">MME-P</th>
+                  <th scope="col">Textcaps</th>
                   <th scope="col">ALL AVG</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><th scope="row">OpenVision2</th><td>L/16</td><td>12.8B</td><td>52.4</td><td>VQAv2 60.0, MME-P 1325</td><td>TextCaps 133.8</td><td>64.9</td></tr>
-                <tr><th scope="row">SigLIP</th><td>L/16</td><td>40.0B</td><td>52.0</td><td>ScienceQA 86.7</td><td>NoCaps 81.5, COCO 72.0</td><td>64.5</td></tr>
-                <tr><th scope="row">SigLIP2</th><td>g/16</td><td>40.0B</td><td>56.6</td><td>ScienceQA 87.7, MME-P 1422</td><td>TextCaps 142.7</td><td>68.9</td></tr>
-                <tr class="highlight-row"><th scope="row">GenLIP</th><td>g/16</td><td>8.0B</td><td>63.5</td><td>GQA 54.5, MME-P 1483</td><td>NoCaps 85.0, TextCaps 144.8</td><td>73.6</td></tr>
+                <tr><th scope="row">SigLIP2</th><td>So/16</td><td>40.0B</td><td>56.7</td><td>1422</td><td>139.3</td><td>69.4</td></tr>
+                <tr class="highlight-row"><th scope="row">GenLIP</th><td>So/16</td><td>8.0B</td><td>62</td><td>1424</td><td>142.1</td><td>71.8</td></tr>
+                <tr><th scope="row">SigLIP2</th><td>g/16</td><td>40.0B</td><td>56.6</td><td>1422</td><td>142.7</td><td>68.9</td></tr>
+                <tr class="highlight-row"><th scope="row">GenLIP</th><td>g/16</td><td>8.0B</td><td>63.5</td><td>1483</td><td>144.8</td><td>73.6</td></tr>
               </tbody>
             </table>
           </div>
@@ -276,7 +309,7 @@
         <div class="section-heading">
           <p class="section-kicker">Representation Probes</p>
           <h2 class="section-title" id="probes-title">What does &quot;speak&quot; reveal?</h2>
-          <p>Generation and patch readout are used here to inspect the learned visual-language representation, not to redefine GenLIP as a captioning model.</p>
+          <p>Generation and patch semantics readout are used here to inspect the learned visual-language representation, not to redefine GenLIP as a captioning model.</p>
         </div>
         <div class="probe-grid figure-story-grid probe-story-grid">
           <article class="figure-story">
@@ -321,8 +354,8 @@
           <div class="demo-samples" aria-label="Demo sample categories">
             <span>Natural image</span>
             <span>Document/OCR</span>
-            <span>Chart or diagram</span>
-            <span>Tiny text</span>
+            <span>Global Caption</span>
+            <span>Local Semantics</span>
           </div>
           <a class="project-button light-button" href="#release">View release links</a>
         </div>
@@ -337,15 +370,9 @@
           <p>The first release path keeps all resources visible from the first viewport and collected here for repeated access.</p>
         </div>
         <div class="release-grid" id="release-models">
-          <article class="release-card"><h3>GenLIP-L/16</h3><p>0.3B parameters - 24 layers - recommended for efficient evaluation.</p><a href="static/pdfs/paper.pdf">Model details</a></article>
-          <article class="release-card"><h3>GenLIP-So/16</h3><p>0.4B parameters - 27 layers - balanced scale for MLLM experiments.</p><a href="static/pdfs/paper.pdf">Model details</a></article>
-          <article class="release-card"><h3>GenLIP-g/16</h3><p>1.1B parameters - 40 layers - strongest benchmark and Doc/OCR performance.</p><a href="static/pdfs/paper.pdf">Model details</a></article>
-        </div>
-        <div class="quick-links">
-          <a id="release-code" href="https://github.com/yanfangcs/vitspeak" target="_blank" rel="noopener">GitHub repository</a>
-          <a href="static/pdfs/paper.pdf" target="_blank" rel="noopener">Paper PDF</a>
-          <a href="#demo">Demo section</a>
-          <a href="static/pdfs/paper.pdf" target="_blank" rel="noopener">Technical source PDF</a>
+          <article class="release-card"><h3>GenLIP-L/16</h3><p>300M parameters - 24 layers - recommended for efficient evaluation.</p><a href="static/pdfs/GenLIP_tech.pdf">Model details</a></article>
+          <article class="release-card"><h3>GenLIP-So/16</h3><p>400M parameters - 27 layers - balanced scale for MLLM experiments.</p><a href="static/pdfs/GenLIP_tech.pdf">Model details</a></article>
+          <article class="release-card"><h3>GenLIP-g/16</h3><p>1.1B parameters - 40 layers - strongest benchmark and Doc/OCR performance.</p><a href="static/pdfs/GenLIP_tech.pdf">Model details</a></article>
         </div>
       </div>
     </section>
