@@ -104,7 +104,7 @@
           <p class="publication-notes"><sup>*</sup>Equal contribution &nbsp; <sup>&dagger;</sup>Corresponding authors</p>
 
           <nav class="publication-links" aria-label="Project links">
-            <a class="project-button" href="static/pdfs/GenLIP_tech.pdf" target="_blank" rel="noopener">
+            <a class="project-button" href="https://arxiv.org/pdf/2605.00809" target="_blank" rel="noopener">
               <i class="fas fa-file-pdf" aria-hidden="true"></i><span>Paper</span>
             </a>
             <a class="project-button" href="https://arxiv.org/pdf/2605.00809" target="_blank" rel="noopener">
@@ -182,7 +182,7 @@
         <h2 class="section-title" id="abstract-title">Abstract</h2>
         <div class="content lead-copy">
           <p>In this paper, we present <strong>Generative Language-Image Pre-training (GenLIP)</strong>, a simplified generative pretraining approach for Vision Transformers tailored to multimodal large language models. To better align ViTs with the autoregressive nature of LLMs, GenLIP trains a ViT to predict language tokens directly from visual tokens using a standard language modeling objective, without contrastive batch construction or an additional text decoder.</p>
-          <p>GenLIP offers three key advantages: <strong>simplicity, scalability, and performance</strong>. With training totaling 8B samples on Recap-DataComp-1B, GenLIP matches or surpasses strong baselines such as SigLIP2. With continued pretraining on multi-resolution images at native aspect ratios, GenLIP further excels at detail-sensitive tasks such as OCR, chart understanding, and visual question answering.</p>
+          <p>GenLIP offers three key advantages: <strong>simplicity, scalability, and performance</strong>. With training totaling 8B image caption data, GenLIP matches or surpasses strong baselines such as SigLIP2. With continued pretraining on multi-resolution images at native aspect ratios, GenLIP further excels at detail-sensitive tasks such as OCR, chart understanding, and visual question answering.</p>
         </div>
         <div class="tldr-grid">
           <article><h3>Simplicity</h3><p>A single Transformer jointly models visual and linguistic tokens with one language modeling objective.</p></article>
