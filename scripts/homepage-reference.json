@@ -1,0 +1,426 @@
+{
+  "source": "User-supplied paper, 9 September 2026, Tables 3 and 4 (pages 8 and 9). Doc/OCR stores the seven original task scores in paper order. Caption is NoCaps in Table 3 and TextCaps in Table 4. ALL AVG retains the paper-reported value.",
+  "date": "2026-09-09",
+  "pdf": "static/pdfs/GenLIP_tech.pdf",
+  "pdf_sha256": "145244808e41eb3b53d96da5bb412d601633ef2636c3d442bc8adc8a331fe483",
+  "affiliations": [
+    "Beijing Jiaotong University",
+    "ByteDance",
+    "Nanyang Technological University",
+    "Beijing Academy of Artificial Intelligence"
+  ],
+  "authors": [
+    {
+      "name": "Yan Fang",
+      "citation": "Fang, Yan",
+      "affiliations": [
+        1,
+        2
+      ],
+      "marks": "1,2,*"
+    },
+    {
+      "name": "Mengcheng Lan",
+      "citation": "Lan, Mengcheng",
+      "affiliations": [
+        2,
+        3
+      ],
+      "marks": "2,3,*"
+    },
+    {
+      "name": "Zilong Huang",
+      "citation": "Huang, Zilong",
+      "affiliations": [
+        2
+      ],
+      "marks": "2,\u2020"
+    },
+    {
+      "name": "Weixian Lei",
+      "citation": "Lei, Weixian",
+      "affiliations": [
+        2
+      ],
+      "marks": "2"
+    },
+    {
+      "name": "Yunqing Zhao",
+      "citation": "Zhao, Yunqing",
+      "affiliations": [
+        2
+      ],
+      "marks": "2"
+    },
+    {
+      "name": "Yujie Zhong",
+      "citation": "Zhong, Yujie",
+      "affiliations": [
+        2
+      ],
+      "marks": "2"
+    },
+    {
+      "name": "Yingchen Yu",
+      "citation": "Yu, Yingchen",
+      "affiliations": [
+        2
+      ],
+      "marks": "2"
+    },
+    {
+      "name": "Qi She",
+      "citation": "She, Qi",
+      "affiliations": [
+        2
+      ],
+      "marks": "2"
+    },
+    {
+      "name": "Yao Zhao",
+      "citation": "Zhao, Yao",
+      "affiliations": [
+        1
+      ],
+      "marks": "1"
+    },
+    {
+      "name": "Yunchao Wei",
+      "citation": "Wei, Yunchao",
+      "affiliations": [
+        1,
+        4
+      ],
+      "marks": "1,4,\u2020"
+    }
+  ],
+  "tables": {
+    "table-3": [
+      {
+        "model": "CLIP",
+        "arch": "L/14",
+        "data": "12.8B",
+        "doc_ocr": [
+          24.8,
+          23.7,
+          38.9,
+          43.9,
+          64.5,
+          30.2,
+          47.8
+        ],
+        "mme": 1218,
+        "caption": 55.5,
+        "all_avg": 53.1
+      },
+      {
+        "model": "AIMv2",
+        "arch": "L/14",
+        "data": "12.0B",
+        "doc_ocr": [
+          26.3,
+          25.2,
+          37.7,
+          47.2,
+          64.2,
+          29.3,
+          47.3
+        ],
+        "mme": 1157,
+        "caption": 80.1,
+        "all_avg": 55.7
+      },
+      {
+        "model": "OpenVision2",
+        "arch": "L/16",
+        "data": "12.8B",
+        "doc_ocr": [
+          30.7,
+          45.6,
+          43.3,
+          49.2,
+          65.6,
+          28.1,
+          47.8
+        ],
+        "mme": 1230,
+        "caption": 84.3,
+        "all_avg": 58.7
+      },
+      {
+        "model": "SigLIP",
+        "arch": "L/16",
+        "data": "40.0B",
+        "doc_ocr": [
+          30.2,
+          41.0,
+          47.3,
+          36.0,
+          66.4,
+          27.8,
+          47.9
+        ],
+        "mme": 1203,
+        "caption": 84.0,
+        "all_avg": 56.9
+      },
+      {
+        "model": "SigLIP2",
+        "arch": "L/16",
+        "data": "40.0B",
+        "doc_ocr": [
+          33.4,
+          45.7,
+          45.1,
+          50.3,
+          66.7,
+          28.2,
+          45.7
+        ],
+        "mme": 1165,
+        "caption": 82.9,
+        "all_avg": 58.7
+      },
+      {
+        "model": "GenLIP",
+        "arch": "L/16",
+        "data": "8.0B",
+        "doc_ocr": [
+          41.2,
+          51.1,
+          51.1,
+          53.6,
+          66.6,
+          30.7,
+          51.1
+        ],
+        "mme": 1258,
+        "caption": 82.6,
+        "all_avg": 61.5
+      },
+      {
+        "model": "SigLIP2",
+        "arch": "So/16",
+        "data": "40.0B",
+        "doc_ocr": [
+          35.2,
+          47.2,
+          46.4,
+          53.3,
+          67.0,
+          28.0,
+          50.3
+        ],
+        "mme": 1220,
+        "caption": 84.3,
+        "all_avg": 60.6
+      },
+      {
+        "model": "GenLIP",
+        "arch": "So/16",
+        "data": "8.0B",
+        "doc_ocr": [
+          40.8,
+          51.5,
+          51.9,
+          55.2,
+          67.2,
+          31.9,
+          52.3
+        ],
+        "mme": 1215,
+        "caption": 87.5,
+        "all_avg": 62.6
+      },
+      {
+        "model": "SigLIP2",
+        "arch": "g/16",
+        "data": "40.0B",
+        "doc_ocr": [
+          35.3,
+          47.3,
+          47.6,
+          54.7,
+          66.7,
+          29.7,
+          49.6
+        ],
+        "mme": 1284,
+        "caption": 84.4,
+        "all_avg": 61.5
+      },
+      {
+        "model": "GenLIP",
+        "arch": "g/16",
+        "data": "8.0B",
+        "doc_ocr": [
+          45.0,
+          55.6,
+          57.0,
+          59.0,
+          68.9,
+          33.9,
+          53.3
+        ],
+        "mme": 1256,
+        "caption": 88.3,
+        "all_avg": 65.2
+      }
+    ],
+    "table-4": [
+      {
+        "model": "CLIP",
+        "arch": "L/14",
+        "data": "12.8B",
+        "doc_ocr": [
+          36.6,
+          29.6,
+          48.4,
+          52.6,
+          76.3,
+          39.0,
+          55.1
+        ],
+        "mme": 1316,
+        "caption": 127.9,
+        "all_avg": 58.8
+      },
+      {
+        "model": "AIMv2",
+        "arch": "L/14",
+        "data": "12.0B",
+        "doc_ocr": [
+          36.8,
+          30.9,
+          46.6,
+          54.5,
+          76.9,
+          37.5,
+          55.1
+        ],
+        "mme": 1240,
+        "caption": 130.5,
+        "all_avg": 58.6
+      },
+      {
+        "model": "OpenVision2",
+        "arch": "L/16",
+        "data": "12.8B",
+        "doc_ocr": [
+          42.5,
+          49.9,
+          49.5,
+          58.8,
+          78.4,
+          33.8,
+          53.8
+        ],
+        "mme": 1325,
+        "caption": 133.8,
+        "all_avg": 64.9
+      },
+      {
+        "model": "SigLIP",
+        "arch": "L/16",
+        "data": "40.0B",
+        "doc_ocr": [
+          41.7,
+          45.7,
+          50.5,
+          56.0,
+          79.3,
+          34.8,
+          55.8
+        ],
+        "mme": 1275,
+        "caption": 131.1,
+        "all_avg": 64.5
+      },
+      {
+        "model": "GenLIP",
+        "arch": "L/16",
+        "data": "8.0B",
+        "doc_ocr": [
+          52.7,
+          59.2,
+          61.7,
+          62.9,
+          80.4,
+          38.8,
+          59.0
+        ],
+        "mme": 1320,
+        "caption": 139.4,
+        "all_avg": 69.0
+      },
+      {
+        "model": "SigLIP2",
+        "arch": "So/16",
+        "data": "40.0B",
+        "doc_ocr": [
+          46.6,
+          55.6,
+          56.3,
+          63.5,
+          81.3,
+          37.2,
+          56.4
+        ],
+        "mme": 1422,
+        "caption": 139.3,
+        "all_avg": 69.4
+      },
+      {
+        "model": "GenLIP",
+        "arch": "So/16",
+        "data": "8.0B",
+        "doc_ocr": [
+          55.3,
+          63.5,
+          66.3,
+          65.7,
+          81.0,
+          41.4,
+          60.8
+        ],
+        "mme": 1424,
+        "caption": 142.1,
+        "all_avg": 71.8
+      },
+      {
+        "model": "SigLIP2",
+        "arch": "g/16",
+        "data": "40.0B",
+        "doc_ocr": [
+          47.2,
+          55.6,
+          56.3,
+          63.5,
+          81.0,
+          36.4,
+          56.4
+        ],
+        "mme": 1422,
+        "caption": 142.7,
+        "all_avg": 68.9
+      },
+      {
+        "model": "GenLIP",
+        "arch": "g/16",
+        "data": "8.0B",
+        "doc_ocr": [
+          57.1,
+          65.9,
+          69.0,
+          66.8,
+          81.0,
+          43.6,
+          61.1
+        ],
+        "mme": 1483,
+        "caption": 144.8,
+        "all_avg": 73.6
+      }
+    ]
+  }
+}

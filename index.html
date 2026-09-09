@@ -35,53 +35,190 @@
   <meta name="citation_pdf_url" content="https://yanfangcs.github.io/vitspeak/static/pdfs/GenLIP_tech.pdf">
   <meta name="theme-color" content="#0b3038">
   <title>Let ViT Speak: Generative Language-Image Pre-training</title>
-  <link rel="icon" type="image/x-icon" href="static/images/pixel.png">
-  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="icon" type="image/png" sizes="64x64" href="static/images/favicon-64.png">
   <link rel="stylesheet" href="static/css/index.css">
-  <script defer src="static/js/fontawesome.all.min.js"></script>
   <script defer src="static/js/index.js"></script>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
-    "headline": "Let ViT Speak: Generative Language-Image Pre-training",
-    "description": "GenLIP is a minimalist generative pretraining framework for scalable MLLM vision encoders.",
-    "datePublished": "2026-05-01",
-    "url": "https://yanfangcs.github.io/vitspeak",
-    "image": "https://yanfangcs.github.io/vitspeak/static/images/social_preview.svg",
-    "isAccessibleForFree": true,
-    "author": [
-      {"@type": "Person", "name": "Yan Fang"},
-      {"@type": "Person", "name": "Mengcheng Lan"},
-      {"@type": "Person", "name": "Zilong Huang"},
-      {"@type": "Person", "name": "Weixian Lei"},
-      {"@type": "Person", "name": "Yunqing Zhao"},
-      {"@type": "Person", "name": "Yujie Zhong"},
-      {"@type": "Person", "name": "Yingchen Yu"},
-      {"@type": "Person", "name": "Qi She"},
-      {"@type": "Person", "name": "Yao Zhao"},
-      {"@type": "Person", "name": "Yunchao Wei"}
-    ],
-    "about": [
-      {"@type": "Thing", "name": "Vision-language pretraining"},
-      {"@type": "Thing", "name": "Multimodal large language models"},
-      {"@type": "Thing", "name": "Vision encoders"}
-    ]
-  }
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "Let ViT Speak: Generative Language-Image Pre-training",
+  "description": "GenLIP is a minimalist generative pretraining framework for scalable MLLM vision encoders.",
+  "datePublished": "2026-05-01",
+  "dateModified": "2026-09-09",
+  "url": "https://yanfangcs.github.io/vitspeak",
+  "image": "https://yanfangcs.github.io/vitspeak/static/images/social_preview.svg",
+  "isAccessibleForFree": true,
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yan Fang",
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "Beijing Jiaotong University"
+        },
+        {
+          "@type": "Organization",
+          "name": "ByteDance"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "name": "Mengcheng Lan",
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "ByteDance"
+        },
+        {
+          "@type": "Organization",
+          "name": "Nanyang Technological University"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "name": "Zilong Huang",
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "ByteDance"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "name": "Weixian Lei",
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "ByteDance"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "name": "Yunqing Zhao",
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "ByteDance"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "name": "Yujie Zhong",
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "ByteDance"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "name": "Yingchen Yu",
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "ByteDance"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "name": "Qi She",
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "ByteDance"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "name": "Yao Zhao",
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "Beijing Jiaotong University"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "name": "Yunchao Wei",
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "Beijing Jiaotong University"
+        },
+        {
+          "@type": "Organization",
+          "name": "Beijing Academy of Artificial Intelligence"
+        }
+      ]
+    }
+  ],
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Vision-language pretraining"
+    },
+    {
+      "@type": "Thing",
+      "name": "Multimodal large language models"
+    },
+    {
+      "@type": "Thing",
+      "name": "Vision encoders"
+    }
+  ]
+}
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-brand" href="#hero-title">GenLIP</a>
+      <nav class="section-nav" aria-label="On this page">
+        <a href="#method-title">Method</a>
+        <a href="#results-title">Results</a>
+        <a href="#release">Models</a>
+        <a href="#citation">Cite</a>
+      </nav>
+    </div>
+  </header>
   <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
-    <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    <svg class="icon" aria-hidden="true" focusable="false"><use href="static/images/icons.svg#chevron-up"></use></svg>
   </button>
 
-  <main id="main-content">
+  <main id="main-content" tabindex="-1">
     <section class="hero publication-hero" aria-labelledby="hero-title">
       <div class="hero-body">
         <div class="container">
-          <div class="publication-kicker">GenLIP: Generative Language-Image Pre-training</div>
-          <h1 class="title publication-title" id="hero-title">Let ViT Speak</h1>
-          <p class="publication-subtitle">A minimalist generative pretraining framework for scalable vision encoders in multimodal large language models.</p>
+          <div class="publication-kicker">Generative Language-Image Pre-training</div>
+          <h1 class="title publication-title" id="hero-title">Let ViT <em>Speak</em></h1>
+          <p class="publication-subtitle">One Transformer. One language modeling objective. A vision encoder that learns by predicting words.</p>
+
+          <nav class="publication-links" aria-label="Project links">
+            <a class="project-button primary-button" href="static/pdfs/GenLIP_tech.pdf" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="static/images/icons.svg#file-pdf"></use></svg><span>Paper</span>
+            </a>
+            <a class="project-button" href="https://arxiv.org/abs/2605.00809" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="static/images/icons.svg#book-open"></use></svg><span>arXiv</span>
+            </a>
+            <a class="project-button" href="https://github.com/YanFangCS/GenLIP">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="static/images/icons.svg#github"></use></svg><span>Code</span>
+            </a>
+            <a class="project-button" href="https://huggingface.co/collections/YanFang/genlip">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="static/images/icons.svg#cube"></use></svg><span>Model</span>
+            </a>
+          </nav>
 
           <div class="publication-authors" aria-label="Authors">
             <span class="author-block"><a href="https://github.com/YanFangCS">Yan Fang</a><sup>1,2,*</sup></span>
@@ -93,74 +230,19 @@
             <span class="author-block"><a href="https://yingchen001.github.io">Yingchen Yu</a><sup>2</sup></span>
             <span class="author-block"><a href="https://qi-she.net">Qi She</a><sup>2</sup></span>
             <span class="author-block"><a href="http://mepro.bjtu.edu.cn/zhaoyao/e_index.htm">Yao Zhao</a><sup>1</sup></span>
-            <span class="author-block"><a href="https://weiyc.github.io">Yunchao Wei</a><sup>1,&dagger;</sup></span>
+            <span class="author-block"><a href="https://weiyc.github.io">Yunchao Wei</a><sup>1,4,&dagger;</sup></span>
           </div>
 
           <div class="publication-affiliations">
-            <span>1 Beijing Jiaotong University</span>
-            <span>2 ByteDance</span>
-            <span>3 Nanyang Technological University</span>
+            <span><sup>1</sup> Beijing Jiaotong University</span>
+            <span><sup>2</sup> ByteDance</span>
+            <span><sup>3</sup> Nanyang Technological University</span>
+            <span><sup>4</sup> Beijing Academy of Artificial Intelligence</span>
           </div>
           <p class="publication-notes"><sup>*</sup>Equal contribution &nbsp; <sup>&dagger;</sup>Corresponding authors</p>
 
-          <nav class="publication-links" aria-label="Project links">
-            <a class="project-button" href="https://arxiv.org/pdf/2605.00809" target="_blank" rel="noopener">
-              <i class="fas fa-file-pdf" aria-hidden="true"></i><span>Paper</span>
-            </a>
-            <a class="project-button" href="https://arxiv.org/pdf/2605.00809" target="_blank" rel="noopener">
-              <i class="fas fa-book-open" aria-hidden="true"></i><span>arXiv</span>
-            </a>
-            <a class="project-button" href="https://github.com/YanFangCS/GenLIP">
-              <i class="fab fa-github" aria-hidden="true"></i><span>Code</span>
-            </a>
-            <a class="project-button" href="https://huggingface.co/collections/YanFang/genlip">
-              <i class="fas fa-cube" aria-hidden="true"></i><span>Model</span>
-            </a>
-            <a class="project-button" href="coming soon">
-              <i class="fas fa-play" aria-hidden="true"></i><span>Demo</span>
-            </a>
-          </nav>
 
-          <h2 class="is-sr-only" id="pipeline-title">GenLIP training and deployment pipeline</h2>
-          <div class="hero-pipeline" aria-labelledby="pipeline-title">
-            <div class="pipeline-label pipeline-label-left">Pretrain by speaking</div>
-            <div class="pipeline-label pipeline-label-right">Deploy as vision encoder</div>
-            <div class="pipeline-stage token-stage">
-              <div class="token-row" aria-hidden="true">
-                <span class="token visual-token"></span>
-                <span class="token visual-token"></span>
-                <span class="token visual-token"></span>
-                <span class="token-plus">+</span>
-                <span class="token text-token"></span>
-                <span class="token text-token"></span>
-              </div>
-              <p>Pretraining on image caption data.</p>
-            </div>
-            <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
-            <div class="pipeline-stage transformer-stage">
-              <strong>GenLIP Model</strong>
-              <span>single transformer + single autoregressive object</span>
-            </div>
-            <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
-            <div class="pipeline-stage deploy-stage">
-              <div class="deploy-flow">
-                <span>GenLIP as ViT</span>
-                <span>Projector</span>
-                <span>MLLM</span>
-              </div>
-              <p>Serve as competitive vision encoder in MLLMs</p>
-            </div>
-          </div>
 
-          <p class="pipeline-takeaway">GenLIP: builds efficient vision encoder with vision-language alignment by a single transformer and a single autoregressive object.</p>
-
-          <div class="evidence-chips" aria-label="Key GenLIP facts">
-            <span>Single Transformer</span>
-            <span>Single NTP Loss</span>
-            <span>No text transformer</span>
-            <span>8B pretraining samples</span>
-            <span>Excellent Scalability</span>
-          </div>
         </div>
       </div>
     </section>
@@ -169,76 +251,106 @@
       <div class="container">
         <h2 class="sr-only" id="metrics-title">Key results</h2>
         <div class="metric-grid">
-          <article class="metric-card"><strong>73.6</strong><span>ALL AVG with GenLIP-g/16 and Qwen2.5-7B frozen visual representation</span></article>
-          <article class="metric-card"><strong>+4.7</strong><span>ALL AVG over SigLIP2-g/16 in the same setting</span></article>
-          <article class="metric-card"><strong>8B</strong><span>pretraining samples, compared with 40B-pair SigLIP2 baselines</span></article>
-          <article class="metric-card"><strong>Doc/OCR</strong><span>largest gains on detail-sensitive document and text-centric benchmarks</span></article>
+          <article class="metric-card"><strong>73.6</strong><span>Overall score with Qwen2.5-7B<br>GenLIP-g/16, frozen encoder</span></article>
+          <article class="metric-card"><strong>+4.7</strong><span>Points over SigLIP2-g/16<br>under the same evaluation</span></article>
+          <article class="metric-card"><strong>8B</strong><span>Stage 1 seen samples<br>versus 40B for SigLIP2</span></article>
+          <article class="metric-card"><strong>39M</strong><span>Additional adaptation samples<br>at native aspect ratios</span></article>
         </div>
       </div>
     </section>
 
     <section class="section paper-summary" aria-labelledby="abstract-title">
-      <div class="container is-max-desktop">
-        <h2 class="section-title" id="abstract-title">Abstract</h2>
-        <div class="content lead-copy">
-          <p>In this paper, we present <strong>Generative Language-Image Pre-training (GenLIP)</strong>, a simplified generative pretraining approach for Vision Transformers tailored to multimodal large language models. To better align ViTs with the autoregressive nature of LLMs, GenLIP trains a ViT to predict language tokens directly from visual tokens using a standard language modeling objective, without contrastive batch construction or an additional text decoder.</p>
-          <p>GenLIP offers three key advantages: <strong>simplicity, scalability, and performance</strong>. With training totaling 8B image caption data, GenLIP matches or surpasses strong baselines such as SigLIP2. With continued pretraining on multi-resolution images at native aspect ratios, GenLIP further excels at detail-sensitive tasks such as OCR, chart understanding, and visual question answering.</p>
+      <div class="container">
+        <div class="abstract-copy">
+          <h2 class="section-title" id="abstract-title">A simpler way to learn vision.</h2>
+          <div class="content lead-copy">
+            <p><strong>Generative Language-Image Pre-training (GenLIP)</strong> trains a Vision Transformer to predict language tokens directly from visual tokens. One Transformer jointly models images and text, using a standard language modeling objective without contrastive batch construction or an additional text decoder.</p>
+            <p>With <strong>8B seen samples</strong> in its first pretraining stage, GenLIP matches or surpasses strong vision-encoder baselines trained on up to 40B samples. A second stage of native-aspect-ratio adaptation further improves detail-sensitive tasks, including OCR and chart understanding.</p>
+          </div>
         </div>
-        <div class="tldr-grid">
-          <article><h3>Simplicity</h3><p>A single Transformer jointly models visual and linguistic tokens with one language modeling objective.</p></article>
-          <article><h3>Scalability</h3><p>Performance improves with both data and model size, supported by gated attention for stable pretraining.</p></article>
-          <article><h3>Performance</h3><p>GenLIP delivers strong MLLM vision encoder performance, especially on document and OCR-heavy tasks.</p></article>
-        </div>
+        <figure class="figure-panel overview-figure" aria-labelledby="pipeline-title">
+          <h3 class="figure-heading" id="pipeline-title">Pretrain by speaking. Deploy as a vision encoder.</h3>
+          <a class="figure-link" href="static/images/genlip-overview.png" target="_blank" rel="noopener" aria-label="Open the GenLIP overview figure at full size">
+            <img src="static/images/genlip-overview.webp" alt="GenLIP replaces separate image and text Transformers with a single model trained by next-token prediction; a perplexity diagnostic compares compatibility with an LLM." width="2400" height="650" loading="lazy" decoding="async">
+          </a>
+          <figcaption><span><strong>Figure 1.</strong> A direct generative objective for the vision backbone. The perplexity diagnostic suggests better compatibility with language modeling.</span><a href="static/pdfs/GenLIP_tech.pdf#page=2" target="_blank" rel="noopener">In the paper ↗</a></figcaption>
+        </figure>
       </div>
     </section>
 
     <section class="section method-section" aria-labelledby="method-title">
       <div class="container">
         <div class="section-heading">
-          <p class="section-kicker">Method</p>
-          <h2 class="section-title" id="method-title">Minimal Generative Pretraining For Vision Encoders</h2>
-          <p>GenLIP uses language generation as the pretraining signal, then deploys the trained Transformer as a visual feature extractor for MLLMs.</p>
+          <p class="section-kicker">The method</p>
+          <h2 class="section-title" id="method-title">Language supervision. Visual representations.</h2>
+          <p>Learn from image-caption pairs, then use the same backbone to supply visual features to an MLLM.</p>
         </div>
         <div class="method-grid">
-          <article class="method-card"><h3>Unified Transformer</h3><p>Image patches and text tokens are concatenated into one sequence and modeled by one Transformer.</p></article>
-          <article class="method-card"><h3>Prefix-LM Objective</h3><p>Visual tokens attend bidirectionally, text tokens attend causally, and loss is applied only to text tokens.</p></article>
-          <article class="method-card"><h3>Gated Attention</h3><p>A lightweight gate regulates attention outputs, reducing attention sink and stabilizing visual representation learning.</p></article>
+          <article class="method-card"><h3>One shared Transformer</h3><p>Image patches precede text tokens in one sequence. Multimodal rotary position embeddings (MRoPE) encode position.</p></article>
+          <article class="method-card"><h3>A visual prefix, a text objective</h3><p>Image tokens attend bidirectionally; text tokens attend causally. Next-token prediction loss applies only to text.</p></article>
+          <article class="method-card"><h3>Gated attention</h3><p>Input-dependent gates reduce first-token attention sinks, improve training stability, and preserve more distributed visual features.</p></article>
         </div>
         <figure class="figure-panel">
-          <img src="static/images/genlip-method-architecture.png" alt="GenLIP architecture with image-text sequence modeling, gated attention, and Prefix-LM attention.">
-          <figcaption>Training uses the LM head for next-token prediction; deployment keeps the Transformer visual features and discards language-only modules.</figcaption>
+          <a class="figure-link" href="static/images/genlip-method-architecture.png" target="_blank" rel="noopener" aria-label="Open the GenLIP architecture figure at full size">
+            <img src="static/images/genlip-method-architecture.webp" alt="GenLIP architecture showing a shared Transformer, gated attention, MRoPE indices, and the Prefix-LM attention mask." width="4180" height="1512" loading="lazy" decoding="async">
+          </a>
+          <figcaption><span><strong>Figure 2.</strong> At deployment, final-layer normalized visual features feed a two-layer MLP projector. The tokenizer and LM head are discarded; attention becomes fully bidirectional.</span><a href="static/pdfs/GenLIP_tech.pdf#page=4" target="_blank" rel="noopener">In the paper ↗</a></figcaption>
         </figure>
+        <div class="training-stages">
+          <article><span class="stage-label">Stage 1</span><h3>Learn at a fixed resolution</h3><p><strong>8B seen samples</strong> over 1B unique Recap-DataComp-1B pairs. Eight epochs at 224 × 224 resolution.</p></article>
+          <article><span class="stage-label">Stage 2</span><h3>Adapt to native aspect ratios</h3><p><strong>39M samples, one epoch.</strong> BLIP3o-Long-Caption, Infinity-MM (stage 1), and CapRL. Between 16 and 1,024 visual tokens per image.</p></article>
+        </div>
+        <details class="research-detail">
+          <summary>Why gated attention matters</summary>
+          <div class="detail-content">
+            <p>The controlled So/16 study shows less attention concentrating on the first sequence token, with stronger text-to-vision attention in deeper layers. This supports the gate's role in stabilizing visual representation learning.</p>
+            <figure class="figure-panel">
+              <a class="figure-link" href="static/images/genlip-attention-sink.png" target="_blank" rel="noopener" aria-label="Open the attention allocation figure at full size"><img src="static/images/genlip-attention-sink.webp" alt="Three layer-wise attention plots compare vision-to-first-token, text-to-first-token, and text-to-vision attention with and without gating." width="2400" height="551" loading="lazy" decoding="async"></a>
+              <figcaption><span><strong>Figure 3.</strong> Attention allocation across all 27 layers of controlled So/16 models.</span><a href="static/pdfs/GenLIP_tech.pdf#page=5" target="_blank" rel="noopener">In the paper ↗</a></figcaption>
+            </figure>
+          </div>
+        </details>
       </div>
     </section>
 
     <section class="section results-section" aria-labelledby="results-title">
       <div class="container">
         <div class="section-heading">
-          <p class="section-kicker">Results</p>
-          <h2 class="section-title" id="results-title">Strong Vision Encoder Performance With Less Pretraining Data</h2>
-          <p>GenLIP consistently improves frozen visual representation evaluation, with its clearest gains on Doc/OCR tasks.</p>
+          <h2 class="section-title" id="results-title">Stronger features. Fewer seen samples.</h2>
+          <p>Consistent overall gains across model scales, with the clearest improvements on document understanding and OCR.</p>
         </div>
-
+        <div class="evaluation-protocol"><strong>A shared evaluation setup</strong><p>Frozen vision encoders · 576 visual tokens · Qwen2.5-Instruct · more than 3M LLaVA-OneVision instruction-tuning samples. All encoders use the same token budget and a two-layer MLP projector.</p></div>
         <div class="table-panel">
-          <div class="table-header">
-            <h3>Qwen2.5-1.5B Frozen Visual Representation</h3>
-            <a href="static/pdfs/GenLIP_tech.pdf" target="_blank" rel="noopener">Full table in paper</a>
-          </div>
-          <div class="responsive-table">
-            <table>
-              <caption class="is-sr-only">Qwen2.5-1.5B frozen visual representation results across Doc/OCR, VQA, caption, and overall averages.</caption>
-              <thead>
-                <tr>
-                  <th scope="col">Model</th>
-                  <th scope="col">Arch</th>
-                  <th scope="col">Data</th>
-                  <th scope="col">Doc/OCR Avg (of 7)</th>
-                  <th scope="col">MME-P</th>
-                  <th scope="col">Nocaps</th>
-                  <th scope="col">ALL AVG</th>
-                </tr>
-              </thead>
+          <div class="table-header"><h3>Qwen2.5-7B · frozen vision encoder</h3><a href="static/pdfs/GenLIP_tech.pdf#page=9" target="_blank" rel="noopener">Table 4 in paper ↗</a></div>
+          <div class="responsive-table" tabindex="0" role="region" aria-label="Scrollable Qwen2.5-7B comparison table">
+            <table data-reference="table-4">
+              <caption class="is-sr-only">Qwen2.5-7B frozen visual representation results. Doc/OCR is the mean of seven tasks. Overall averages use all 14 benchmarks, not just the selected columns shown here.</caption>
+              <thead><tr><th scope="col">Model</th><th scope="col">Arch</th><th scope="col">Samples</th><th scope="col">Doc/OCR</th><th scope="col">MME-P</th><th scope="col">TextCaps</th><th scope="col">All avg.</th></tr></thead>
               <tbody>
+                <tr><th scope="row">CLIP</th><td>L/14</td><td>12.8B</td><td>48.2</td><td>1316</td><td>127.9</td><td>58.8</td></tr>
+                <tr><th scope="row">AIMv2</th><td>L/14</td><td>12.0B</td><td>48.3</td><td>1240</td><td>130.5</td><td>58.6</td></tr>
+                <tr><th scope="row">OpenVision2</th><td>L/16</td><td>12.8B</td><td>52.4</td><td>1325</td><td>133.8</td><td>64.9</td></tr>
+                <tr><th scope="row">SigLIP</th><td>L/16</td><td>40.0B</td><td>52.0</td><td>1275</td><td>131.1</td><td>64.5</td></tr>
+                <tr class="highlight-row"><th scope="row">GenLIP</th><td>L/16</td><td>8.0B</td><td>59.2</td><td>1320</td><td>139.4</td><td>69.0</td></tr>
+                <tr><th scope="row">SigLIP2</th><td>So/16</td><td>40.0B</td><td>56.7</td><td>1422</td><td>139.3</td><td>69.4</td></tr>
+                <tr class="highlight-row"><th scope="row">GenLIP</th><td>So/16</td><td>8.0B</td><td>62.0</td><td>1424</td><td>142.1</td><td>71.8</td></tr>
+                <tr><th scope="row">SigLIP2</th><td>g/16</td><td>40.0B</td><td>56.6</td><td>1422</td><td>142.7</td><td>68.9</td></tr>
+                <tr class="highlight-row"><th scope="row">GenLIP</th><td>g/16</td><td>8.0B</td><td>63.5</td><td>1483</td><td>144.8</td><td>73.6</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <details class="research-detail table-detail">
+          <summary>Compare with the smaller Qwen2.5-1.5B backbone</summary>
+        <div class="table-panel">
+          <div class="table-header"><h3>Qwen2.5-1.5B · frozen vision encoder</h3><a href="static/pdfs/GenLIP_tech.pdf#page=8" target="_blank" rel="noopener">Table 3 in paper ↗</a></div>
+          <div class="responsive-table" tabindex="0" role="region" aria-label="Scrollable Qwen2.5-1.5B comparison table">
+            <table data-reference="table-3">
+              <caption class="is-sr-only">Qwen2.5-1.5B frozen visual representation results. Doc/OCR is the mean of seven tasks. Overall averages use all 14 benchmarks, not just the selected columns shown here.</caption>
+              <thead><tr><th scope="col">Model</th><th scope="col">Arch</th><th scope="col">Samples</th><th scope="col">Doc/OCR</th><th scope="col">MME-P</th><th scope="col">NoCaps</th><th scope="col">All avg.</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">CLIP</th><td>L/14</td><td>12.8B</td><td>39.1</td><td>1218</td><td>55.5</td><td>53.1</td></tr>
+                <tr><th scope="row">AIMv2</th><td>L/14</td><td>12.0B</td><td>39.6</td><td>1157</td><td>80.1</td><td>55.7</td></tr>
                 <tr><th scope="row">OpenVision2</th><td>L/16</td><td>12.8B</td><td>44.3</td><td>1230</td><td>84.3</td><td>58.7</td></tr>
                 <tr><th scope="row">SigLIP</th><td>L/16</td><td>40.0B</td><td>42.4</td><td>1203</td><td>84.0</td><td>56.9</td></tr>
                 <tr><th scope="row">SigLIP2</th><td>L/16</td><td>40.0B</td><td>45.0</td><td>1165</td><td>82.9</td><td>58.7</td></tr>
@@ -251,113 +363,86 @@
             </table>
           </div>
         </div>
-
-        <div class="table-panel">
-          <div class="table-header">
-            <h3>Qwen2.5-7B Frozen Visual Representation</h3>
-            <a href="static/pdfs/GenLIP_tech.pdf" target="_blank" rel="noopener">Full table in paper</a>
-          </div>
-          <div class="responsive-table">
-            <table>
-              <caption class="is-sr-only">Qwen2.5-7B frozen visual representation results across Doc/OCR, VQA, caption, and overall averages.</caption>
-              <thead>
-                <tr>
-                  <th scope="col">Model</th>
-                  <th scope="col">Arch</th>
-                  <th scope="col">Data</th>
-                  <th scope="col">Doc/OCR Avg (of 7)</th>
-                  <th scope="col">MME-P</th>
-                  <th scope="col">Textcaps</th>
-                  <th scope="col">ALL AVG</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><th scope="row">SigLIP2</th><td>So/16</td><td>40.0B</td><td>56.7</td><td>1422</td><td>139.3</td><td>69.4</td></tr>
-                <tr class="highlight-row"><th scope="row">GenLIP</th><td>So/16</td><td>8.0B</td><td>62</td><td>1424</td><td>142.1</td><td>71.8</td></tr>
-                <tr><th scope="row">SigLIP2</th><td>g/16</td><td>40.0B</td><td>56.6</td><td>1422</td><td>142.7</td><td>68.9</td></tr>
-                <tr class="highlight-row"><th scope="row">GenLIP</th><td>g/16</td><td>8.0B</td><td>63.5</td><td>1483</td><td>144.8</td><td>73.6</td></tr>
-              </tbody>
-            </table>
-          </div>
+        </details>
+        <p class="table-note"><strong>Reading the tables.</strong> Doc/OCR averages seven tasks. All avg. is the unweighted mean of 14 benchmarks, with MME-P divided by 20 and captioning CIDEr scores unchanged. The selected columns above do not reproduce that full mean. GenLIP's 8B denotes Stage 1 seen samples; Stage 2 adds 39M samples.</p>
+        <div class="evaluation-highlights">
+          <article><h3>Joint fine-tuning</h3><p>With the vision encoder unfrozen, GenLIP-So/16 reaches <strong>68.5</strong> at 576 patches and <strong>70.3</strong> at 729 patches in the standard LLaVA-NeXT setting.</p><a href="static/pdfs/GenLIP_tech.pdf#page=10" target="_blank" rel="noopener">Table 6 ↗</a></article>
+          <article><h3>Broader evaluation</h3><p>The advantage also holds in the Cambrian-1-style suite. With Qwen2.5-7B, GenLIP-g/16 scores <strong>66.0</strong> versus <strong>63.0</strong> for SigLIP2-g/16.</p><a href="static/pdfs/GenLIP_tech.pdf#page=24" target="_blank" rel="noopener">Table 13 ↗</a></article>
         </div>
-
         <div class="result-figure-grid figure-story-grid">
           <article class="figure-story">
             <figure class="figure-panel story-figure">
-              <img src="static/images/genlip-data-scale.png" alt="Data scaling curves for OCR, VQA, and Caption tasks from 1B to 8B pretraining samples.">
-              <figcaption>Data scaling shows sustained gains, with gated attention improving stability across scales.</figcaption>
+              <a class="figure-link" href="static/images/genlip-data-scale.png" target="_blank" rel="noopener" aria-label="Open the data scaling figure at full size"><img src="static/images/genlip-data-scale.webp" alt="Data scaling curves for OCR, VQA, and Caption tasks from 1B to 8B pretraining samples." width="1122" height="314" loading="lazy" decoding="async"></a>
+              <figcaption>Figure 4. Data scaling from 1B to 8B first-stage seen samples, with and without gated attention.</figcaption>
             </figure>
             <div class="research-takeaway">
-              <p><strong>Scaling signal.</strong> As pretraining grows from 1B to 8B samples, GenLIP keeps improving OCR, VQA, and caption probes, supporting the vision encoder scaling story rather than a one-off benchmark gain.</p>
+              <p><strong>Scaling signal.</strong> Performance improves with more pretraining, but gains flatten between 4B and 8B samples, especially for VQA and captioning. Plot averages follow the task groups labeled in the figure.</p>
             </div>
           </article>
           <article class="figure-story reverse-story">
             <figure class="figure-panel story-figure">
-              <img src="static/images/genlip-stage2-validation.png" alt="Stage 1 versus Stage 2 validation curves across evaluation resolutions.">
-              <figcaption>Native-aspect adaptation improves OCR, VQA, and caption performance at higher evaluation resolutions.</figcaption>
+              <a class="figure-link" href="static/images/genlip-stage2-validation.png" target="_blank" rel="noopener" aria-label="Open the resolution adaptation figure at full size"><img src="static/images/genlip-stage2-validation.webp" alt="Stage 1 versus Stage 2 validation curves across evaluation resolutions." width="1122" height="314" loading="lazy" decoding="async"></a>
+              <figcaption>Figure 5. Stage 1 and Stage 2 GenLIP-So/16 across evaluation resolutions.</figcaption>
             </figure>
             <div class="research-takeaway">
-              <p><strong>Resolution signal.</strong> Continued pretraining with native aspect ratios strengthens detail-sensitive recognition, which is where an MLLM vision encoder most needs reliable spatial evidence.</p>
+              <p><strong>Resolution signal.</strong> Native-aspect adaptation improves detail-sensitive multimodal understanding. These curves use the task groups labeled in the figure, distinct from the seven-task Doc/OCR table average.</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section probes-section" aria-labelledby="probes-title">
+    <section class="section probes-section" id="demo" aria-labelledby="probes-title">
       <div class="container">
         <div class="section-heading">
-          <p class="section-kicker">Representation Probes</p>
+          <p class="section-kicker">Inside the representation</p>
           <h2 class="section-title" id="probes-title">What does &quot;speak&quot; reveal?</h2>
-          <p>Generation and patch semantics readout are used here to inspect the learned visual-language representation, not to redefine GenLIP as a captioning model.</p>
+          <p>Caption generation and patch readout offer a closer look at the visual-language alignment learned during pretraining.</p>
         </div>
+        <p class="figure-instruction">Select a figure to read it at full size.</p>
         <div class="probe-grid figure-story-grid probe-story-grid">
           <article class="figure-story">
             <figure class="figure-panel story-figure">
-              <img src="static/images/genlip-caption-examples.png" alt="GenLIP caption generation examples comparing model scales and pretraining stages.">
-              <figcaption>Direct caption generation shows that the pretrained ViT can produce grounded descriptions from visual tokens.</figcaption>
+              <a class="figure-link" href="static/images/genlip-caption-examples.png" target="_blank" rel="noopener" aria-label="Open the caption generation figure at full size"><img src="static/images/genlip-caption-examples.webp" alt="GenLIP caption generation examples comparing model scales and pretraining stages." width="2158" height="1453" loading="lazy" decoding="async"></a>
+              <figcaption>Figure 6. Direct image descriptions across three model scales and two pretraining stages.</figcaption>
             </figure>
             <div class="research-takeaway">
-              <p><strong>Generation probe.</strong> Captioning is used here as an inspection tool for visual-language alignment, while deployment still uses GenLIP as the MLLM vision encoder.</p>
+              <p><strong>Generation probe.</strong> Larger models and native-aspect adaptation produce more detailed descriptions. These qualitative probes illustrate learned alignment; GenLIP is deployed as a vision encoder.</p>
             </div>
           </article>
           <article class="figure-story reverse-story">
             <figure class="figure-panel story-figure">
-              <img src="static/images/genlip-patch-semantics.png" alt="Patch semantic readout showing local visual regions mapped to language tokens.">
-              <figcaption>Patch semantics reveal local visual embeddings aligned with language concepts.</figcaption>
+              <a class="figure-link" href="static/images/genlip-patch-semantics.png" target="_blank" rel="noopener" aria-label="Open the patch semantics figure at full size"><img src="static/images/genlip-patch-semantics.webp" alt="Patch semantic readout showing local visual regions mapped to language tokens." width="1920" height="1533" loading="lazy" decoding="async"></a>
+              <figcaption>Figure 7. Top-five language tokens read directly from selected image patch features.</figcaption>
             </figure>
             <div class="research-takeaway">
-              <p><strong>Patch semantics.</strong> Local readouts make the learned representation more legible by showing which visual regions align with recognizable language concepts.</p>
+              <p><strong>Patch semantics.</strong> Selected regions in So/16 and g/16 align with meaningful language concepts, with more stable readouts in g/16. This behavior is not established for L/16.</p>
             </div>
           </article>
         </div>
+        <details class="research-detail ocr-detail"><summary>Inspect the OCR examples and failure cases</summary>
         <article class="figure-story wide-story">
           <figure class="figure-panel wide-figure story-figure">
-            <img src="static/images/genlip-ocr-examples.png" alt="OCR-heavy GenLIP generation probes on receipt, geometry, and tiny text examples.">
-            <figcaption>OCR-heavy probes explain the strong Doc/OCR benchmark behavior and expose remaining failure modes.</figcaption>
+              <a class="figure-link" href="static/images/genlip-ocr-examples.png" target="_blank" rel="noopener" aria-label="Open the OCR examples figure at full size"><img src="static/images/genlip-ocr-examples.webp" alt="OCR-heavy GenLIP generation probes on receipt, geometry, and tiny text examples." width="2155" height="2835" loading="lazy" decoding="async"></a>
+            <figcaption>Figure 8. Qualitative OCR examples with both correct details and generation errors.</figcaption>
           </figure>
           <div class="research-takeaway">
-            <p><strong>Doc/OCR behavior.</strong> The qualitative probes connect the benchmark gains to visible text-centric evidence, while keeping failure modes inspectable instead of hiding them behind aggregate scores.</p>
+            <p><strong>Doc/OCR behavior.</strong> Long number strings, precise spatial layouts, and tiny text remain challenging, even when descriptions are fluent.</p>
           </div>
         </article>
+        </details>
       </div>
     </section>
 
-    <section class="section demo-section" id="demo" aria-labelledby="demo-title">
+    <section class="section scope-section" aria-labelledby="scope-title">
       <div class="container">
-        <div class="demo-panel">
-          <div>
-            <p class="section-kicker">Demo</p>
-            <h2 class="section-title" id="demo-title">Explore GenLIP Through Generation Probes</h2>
-            <p>Explore the pretrained encoder's visual-language alignment through generation probes. The deployed model is intended as an MLLM vision encoder.</p>
+        <div class="scope-layout">
+          <div><h2 class="section-title" id="scope-title">What the evidence tells us.</h2><p class="scope-intro">Strong results as an MLLM vision encoder, with tradeoffs that remain visible.</p></div>
+          <div class="scope-notes">
+            <details class="research-detail"><summary>Controlled pretraining and language initialization</summary><div class="detail-content"><p>In Table 8, GenLIP reaches 57.2 versus 55.9 for OpenVision2 and 54.4 for SigLIP after 2B first-stage samples. The baselines additionally receive 0.2B high-resolution adaptation samples, while GenLIP is evaluated directly after Stage 1.</p><p>In the separate 1B-sample study (Table 9), training the gated SAIL-style architecture from scratch scores 56.0, compared with 54.8 using Qwen3 initialization. The paper interprets this as possible language-prior bias in visual grounding, not a universal claim about language initialization.</p><a href="static/pdfs/GenLIP_tech.pdf#page=12" target="_blank" rel="noopener">Read the ablations ↗</a></div></details>
+            <details class="research-detail"><summary>Discriminative features and retrieval</summary><div class="detail-content"><p>Native-aspect adaptation improves multimodal understanding but lowers ImageNet-1K accuracy at every model scale. GenLIP-g/16 changes from 85.2 to 83.0 top-1 accuracy, and reaches 44.5 mIoU on ADE20K. GenLIP remains behind SigLIP2 on these discriminative evaluations and on zero-shot retrieval.</p><a href="static/pdfs/GenLIP_tech.pdf#page=14" target="_blank" rel="noopener">Table 11 ↗</a> <a href="static/pdfs/GenLIP_tech.pdf#page=23" target="_blank" rel="noopener">Table 12 ↗</a></div></details>
+            <details class="research-detail"><summary>Scope and remaining limitations</summary><div class="detail-content"><p>The experiments use the academic-scale LLaVA-NeXT framework; transfer to frontier MLLMs remains to be established. Scaling beyond 1B unique pretraining pairs is unverified, and high-quality captions carry acquisition costs. Qualitative generations can still misread text or spatial relations.</p><a href="static/pdfs/GenLIP_tech.pdf#page=16" target="_blank" rel="noopener">Read the limitations ↗</a></div></details>
           </div>
-          <div class="demo-samples" aria-label="Demo sample categories">
-            <span>Natural image</span>
-            <span>Document/OCR</span>
-            <span>Global Caption</span>
-            <span>Local Semantics</span>
-          </div>
-          <a class="project-button light-button" href="#release">View release links</a>
         </div>
       </div>
     </section>
@@ -365,15 +450,16 @@
     <section class="section release-section" id="release" aria-labelledby="release-title">
       <div class="container">
         <div class="section-heading">
-          <p class="section-kicker">Release</p>
-          <h2 class="section-title" id="release-title">Paper, Code, Models, And Citation</h2>
-          <p>The first release path keeps all resources visible from the first viewport and collected here for repeated access.</p>
+
+          <h2 class="section-title" id="release-title">Explore the models.</h2>
+          <p>Three model scales, with checkpoints after native-aspect-ratio adaptation. See the code repository for training and configuration details.</p>
         </div>
         <div class="release-grid" id="release-models">
-          <article class="release-card"><h3>GenLIP-L/16</h3><p>300M parameters - 24 layers - recommended for efficient evaluation.</p><a href="https://huggingface.co/YanFang/GenLIP-L16-NaViT">Model details</a></article>
-          <article class="release-card"><h3>GenLIP-So/16</h3><p>400M parameters - 27 layers - balanced scale for MLLM experiments.</p><a href="https://huggingface.co/YanFang/GenLIP-So16-NaViT">Model details</a></article>
-          <article class="release-card"><h3>GenLIP-g/16</h3><p>1.1B parameters - 40 layers - strongest benchmark and Doc/OCR performance.</p><a href="https://huggingface.co/YanFang/GenLIP-g16-NaViT">Model details</a></article>
+          <article class="release-card"><h3>GenLIP-L/16</h3><p><strong>300M</strong> parameters <span>24 layers · 1,024 hidden dimensions</span></p><a href="https://huggingface.co/YanFang/GenLIP-L16-NaViT">Model details ↗</a></article>
+          <article class="release-card"><h3>GenLIP-So/16</h3><p><strong>400M</strong> parameters <span>27 layers · 1,152 hidden dimensions</span></p><a href="https://huggingface.co/YanFang/GenLIP-So16-NaViT">Model details ↗</a></article>
+          <article class="release-card"><h3>GenLIP-g/16</h3><p><strong>1.1B</strong> parameters <span>40 layers · 1,536 hidden dimensions</span></p><a href="https://huggingface.co/YanFang/GenLIP-g16-NaViT">Model details ↗</a></article>
         </div>
+        <p class="paper-revision">Page content follows the paper dated <time datetime="2026-09-09">9 September 2026</time>.</p>
       </div>
     </section>
 
@@ -382,12 +468,13 @@
         <div class="bibtex-header">
           <h2 class="section-title" id="citation-title">BibTeX</h2>
           <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard" type="button">
-            <i class="fas fa-copy" aria-hidden="true"></i>
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="static/images/icons.svg#copy"></use></svg>
             <span class="copy-text">Copy</span>
           </button>
         </div>
+        <p class="copy-status" role="status" aria-live="polite"></p>
         <pre id="bibtex-code"><code>@article{fang2026letvitspeakgenerative,
-  title={Let ViT Speak: Generative Language-Image Pre-training}, 
+  title={Let ViT Speak: Generative Language-Image Pre-training},
   author={Yan Fang and Mengcheng Lan and Zilong Huang and Weixian Lei and Yunqing Zhao and Yujie Zhong and Yingchen Yu and Qi She and Yao Zhao and Yunchao Wei},
   journal={arXiv preprint arXiv:2605.00809},
   year={2026}
